@@ -1,0 +1,7 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": { "tag": "zcraft:obsidian_shard" },
+	"result": "zcraft:obsidian_ingot",
+	"experience": 2.3,
+	"cookingtime": 200
+}

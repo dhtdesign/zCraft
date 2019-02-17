@@ -1,0 +1,44 @@
+{
+	"item.zcraft.obsidian_shard": "Obsidian Shard",
+	"item.zcraft.diamond_shard": "Diamond Shard",
+	"item.zcraft.emerald_shard": "Emerald Shard",
+	"item.zcraft.obsidian_ingot": "Obsidian Ingot",
+	"item.zcraft.pouch": "Pouch",
+	"item.zcraft.pouch_big": "Big Pouch",
+	"item.zcraft.cheese": "Cheese",
+	"item.zcraft.charged_pearl": "Charged Ender Pearl",
+	
+	
+	
+	"item.zcraft.obsidian_axe": "Obsidian Axe",
+	"item.zcraft.obsidian_hoe": "Obsidian Hoe",
+	"item.zcraft.obsidian_pickaxe": "Obsidian Pickaxe",
+	"item.zcraft.obsidian_shovel": "Obsidian Shovel",
+	"item.zcraft.obsidian_sword": "Obsidian Sword",
+	
+	"item.zcraft.obsidian_helmet": "Obsidian Helmet",
+	"item.zcraft.obsidian_chestplate": "Obsidian Chestplate",
+	"item.zcraft.obsidian_leggings": "Obsidian Leggings",
+	"item.zcraft.obsidian_boots": "Obsidian Boots",
+	
+	
+	"item.zcraft.emerald_axe": "Emerald Axe",
+	"item.zcraft.emerald_hoe": "Emerald Hoe",
+	"item.zcraft.emerald_pickaxe": "Emerald Pickaxe",
+	"item.zcraft.emerald_shovel": "Emerald Shovel",
+	"item.zcraft.emerald_sword": "Emerald Sword",
+	
+	"item.zcraft.emerald_helmet": "Emerald Helmet",
+	"item.zcraft.emerald_chestplate": "Emerald Chestplate",
+	"item.zcraft.emerald_leggings": "Emerald Leggings",
+	"item.zcraft.emerald_boots": "Emerald Boots",
+	
+	"block.zcraft.shard_block": "Shard Block",
+	"block.zcraft.ruby_ore": "Ruby Ore",
+	
+	
+	
+	"itemGroup.zcrafttab": "zCraft"
+	
+	
+}

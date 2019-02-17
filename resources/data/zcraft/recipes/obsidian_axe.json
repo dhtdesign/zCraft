@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+	
+  	"pattern":
+  	[
+		"II ",
+		"IS ",
+		" S "
+  	],
+	"key":
+	{
+		"I": { "item": "zcraft:obsidian_ingot"},
+		"S": { "item": "minecraft:stick"}
+	
+	},
+	
+	"result": { "item": "zcraft:obsidian_axe"},
+	"count": 1
+
+}

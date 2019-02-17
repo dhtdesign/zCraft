@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+	
+  	"pattern":
+  	[
+		"DDD",
+		"DOD",
+		"DDD"
+  	],
+	"key":
+	{
+		"O": { "item": "minecraft:obsidian"},
+		"D": { "item": "zcraft:charged_pearl"}
+	
+	},
+	
+	"result": { "item": "zcraft:obsidian_shard"},
+	"count": 1
+
+}

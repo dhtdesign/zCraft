@@ -1,0 +1,7 @@
+{
+    "parent": "item/handheld",
+    "textures": 
+	{
+        "layer0": "zcraft:item/tool/obsidian_sword"
+    }
+}
