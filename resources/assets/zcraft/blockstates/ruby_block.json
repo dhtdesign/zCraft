@@ -1,0 +1,5 @@
+{
+    "variants": {
+        "": { "model": "zcraft:block/ruby_block" }
+    }
+}

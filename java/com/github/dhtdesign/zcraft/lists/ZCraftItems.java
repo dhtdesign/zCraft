@@ -13,13 +13,22 @@ public class ZCraftItems
 	public static Item obsidian_ingot;
 	public static Item cheese;
 	public static Item charged_pearl;
+	public static Item ruby;
+	public static Item cloth;
 	
 	//	Tools
+	public static Item flint_axe;
+	public static Item flint_hoe;
+	public static Item flint_pickaxe;
+	public static Item flint_shovel;
+	public static Item flint_sword;
+	
 	public static Item obsidian_axe;
 	public static Item obsidian_hoe;
 	public static Item obsidian_pickaxe;
 	public static Item obsidian_shovel;
 	public static Item obsidian_sword;
+	
 	public static Item emerald_axe;
 	public static Item emerald_hoe;
 	public static Item emerald_pickaxe;
@@ -28,6 +37,11 @@ public class ZCraftItems
 	
 	
 	//  Armor
+	public static Item cloth_helmet;
+	public static Item cloth_chestplate;
+	public static Item cloth_leggings;
+	public static Item cloth_boots;
+	
 	public static Item obsidian_helmet;
 	public static Item obsidian_chestplate;
 	public static Item obsidian_leggings;
@@ -43,8 +57,9 @@ public class ZCraftItems
 	
 	
 	//	Blocks
-	public static Item shard_block;
+	public static Item ruby_block;
 	public static Item ruby_ore;
+
 	
 
 }

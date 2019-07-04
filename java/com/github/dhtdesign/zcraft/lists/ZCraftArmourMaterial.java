@@ -5,14 +5,16 @@ import com.github.dhtdesign.zcraft.ZCraft;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.IArmorMaterial;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvent;
 
 public enum ZCraftArmourMaterial implements IArmorMaterial 
 {
+	cloth("cloth", 150, new int[] {4, 6, 5, 3}, 5, ZCraftItems.cloth,"item.armor.equip_diamond", 0.2F),
 	obsidian("obsidian", 1500, new int[] {10, 12, 10, 9}, 25, ZCraftItems.obsidian_ingot,"item.armor.equip_diamond", 0.2F),
-	emerald("emerald", 1200, new int[] {8, 10, 9, 7}, 25, ZCraftItems.obsidian_ingot,"item.armor.equip_diamond", 0.2F);
+	emerald("emerald", 1200, new int[] {8, 10, 9, 7}, 25, Items.EMERALD,"item.armor.equip_diamond", 0.2F);
 	
 	
 	
