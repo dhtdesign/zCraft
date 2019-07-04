@@ -28,17 +28,32 @@
 	"item.zcraft.emerald_shovel": "Emerald Shovel",
 	"item.zcraft.emerald_sword": "Emerald Sword",
 	
+	"item.zcraft.flint_axe": "Flint Axe",
+	"item.zcraft.flint_hoe": "Flint Hoe",
+	"item.zcraft.flint_pickaxe": "Flint Pickaxe",
+	"item.zcraft.flint_shovel": "Flint Shovel",
+	"item.zcraft.flint_sword": "Flint Sword",
+	
+	
 	"item.zcraft.emerald_helmet": "Emerald Helmet",
 	"item.zcraft.emerald_chestplate": "Emerald Chestplate",
 	"item.zcraft.emerald_leggings": "Emerald Leggings",
 	"item.zcraft.emerald_boots": "Emerald Boots",
 	
-	"block.zcraft.shard_block": "Shard Block",
+	"block.zcraft.ruby_block": "Ruby Block",
 	"block.zcraft.ruby_ore": "Ruby Ore",
+	"item.zcraft.ruby": "Ruby",
+	"item.zcraft.cloth": "Cloth",
+	
+	"item.zcraft.cloth_helmet": "Cloth Helmet",
+	"item.zcraft.cloth_chestplate": "Cloth Chestplate",
+	"item.zcraft.cloth_leggings": "Cloth Leggings",
+	"item.zcraft.cloth_boots": "Cloth Boots",
 	
 	
 	
-	"itemGroup.zcrafttab": "zCraft"
+	"itemGroup.zcrafttab": "zCraft Items & Blocks",
+	"itemGroup.zcrafttab_tools": "zCraft Tools & Armor"
 	
 	
 }

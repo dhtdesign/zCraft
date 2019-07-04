@@ -7,10 +7,12 @@ import com.github.dhtdesign.zcraft.config.Config;
 import com.github.dhtdesign.zcraft.items.CustomAxeItem;
 import com.github.dhtdesign.zcraft.items.CustomPickaxeItem;
 import com.github.dhtdesign.zcraft.items.ItemChargedPearl;
+import com.github.dhtdesign.zcraft.lists.ZCraftArmourMaterial;
 import com.github.dhtdesign.zcraft.lists.ZCraftBlocks;
 import com.github.dhtdesign.zcraft.lists.ZCraftItems;
-import com.github.dhtdesign.zcraft.lists.ZCraftArmourMaterial;
 import com.github.dhtdesign.zcraft.lists.ZCraftToolMaterial;
+import com.github.dhtdesign.zcraft.util.ZItemGroup;
+import com.github.dhtdesign.zcraft.util.ZToolGroup;
 import com.github.dhtdesign.zcraft.world.OreGeneration;
 
 import net.minecraft.block.Block;
@@ -44,7 +46,8 @@ public class ZCraft
 	public static ZCraft instance;
 	public static final String MODID = "zcraft";
 	public static final Logger LOGGER = LogManager.getLogger(MODID);
-	public static final ItemGroup ZCRAFT = new ZItemGroup();
+	public static final ItemGroup ZCRAFT_ITEMS = new ZItemGroup();
+	public static final ItemGroup ZCRAFT_TOOLS = new ZToolGroup();
 	
 	public ZCraft() 
 	{
@@ -68,6 +71,7 @@ public class ZCraft
 	{
 		OreGeneration.setupOreGeneration();
 		
+		
 		LOGGER.info("Setup method registered");
 
 	}
@@ -90,43 +94,61 @@ public class ZCraft
 			
 			event.getRegistry().registerAll
 			(
-					ZCraftItems.obsidian_shard = new Item(new Item.Properties().group(ZCRAFT)).setRegistryName(location("obsidian_shard")),
-					ZCraftItems.obsidian_ingot = new Item(new Item.Properties().group(ZCRAFT)).setRegistryName(location("obsidian_ingot")),
-					
-					ZCraftItems.diamond_shard = new Item(new Item.Properties().group(ZCRAFT)).setRegistryName(location("diamond_shard")),
-					ZCraftItems.emerald_shard = new Item(new Item.Properties().group(ZCRAFT)).setRegistryName(location("emerald_shard")),
-					ZCraftItems.charged_pearl = new ItemChargedPearl(new Item.Properties().group(ZCRAFT).maxStackSize(16)).setRegistryName(location("charged_pearl")),
-	
-					
-					ZCraftItems.obsidian_axe = new CustomAxeItem(ZCraftToolMaterial.obsidian, -1.0f, 6.0f, new Item.Properties().group(ZCRAFT)).setRegistryName(location("obsidian_axe")),
-					ZCraftItems.obsidian_hoe = new HoeItem(ZCraftToolMaterial.obsidian, 6.0f, new Item.Properties().group(ZCRAFT)).setRegistryName(location("obsidian_hoe")),
-					ZCraftItems.obsidian_pickaxe = new CustomPickaxeItem(ZCraftToolMaterial.obsidian, -2, 6.0f, new Item.Properties().group(ZCRAFT)).setRegistryName(location("obsidian_pickaxe")),
-					ZCraftItems.obsidian_shovel = new ShovelItem(ZCraftToolMaterial.obsidian, -3.0f, 6.0f, new Item.Properties().group(ZCRAFT)).setRegistryName(location("obsidian_shovel")),
-					ZCraftItems.obsidian_sword = new SwordItem(ZCraftToolMaterial.obsidian, 0, 6.0f, new Item.Properties().group(ZCRAFT)).setRegistryName(location("obsidian_sword")),
-					
-					ZCraftItems.obsidian_helmet = new ArmorItem(ZCraftArmourMaterial.obsidian, EquipmentSlotType.HEAD, new Item.Properties().group(ZCRAFT)).setRegistryName(location("obsidian_helmet")),
-					ZCraftItems.obsidian_chestplate = new ArmorItem(ZCraftArmourMaterial.obsidian, EquipmentSlotType.CHEST, new Item.Properties().group(ZCRAFT)).setRegistryName(location("obsidian_chestplate")),
-					ZCraftItems.obsidian_leggings = new ArmorItem(ZCraftArmourMaterial.obsidian, EquipmentSlotType.LEGS, new Item.Properties().group(ZCRAFT)).setRegistryName(location("obsidian_leggings")),
-					ZCraftItems.obsidian_boots = new ArmorItem(ZCraftArmourMaterial.obsidian, EquipmentSlotType.FEET, new Item.Properties().group(ZCRAFT)).setRegistryName(location("obsidian_boots")),
-											
-					
-					
-					
-					ZCraftItems.emerald_axe = new CustomAxeItem(ZCraftToolMaterial.emerald, -1.0f, 6.0f, new Item.Properties().group(ZCRAFT)).setRegistryName(location("emerald_axe")),
-					ZCraftItems.emerald_hoe = new HoeItem(ZCraftToolMaterial.emerald, 6.0f, new Item.Properties().group(ZCRAFT)).setRegistryName(location("emerald_hoe")),
-					ZCraftItems.emerald_pickaxe = new CustomPickaxeItem(ZCraftToolMaterial.emerald, -2, 6.0f, new Item.Properties().group(ZCRAFT)).setRegistryName(location("emerald_pickaxe")),
-					ZCraftItems.emerald_shovel = new ShovelItem(ZCraftToolMaterial.emerald, -3.0f, 6.0f, new Item.Properties().group(ZCRAFT)).setRegistryName(location("emerald_shovel")),
-					ZCraftItems.emerald_sword = new SwordItem(ZCraftToolMaterial.emerald, 0, 6.0f, new Item.Properties().group(ZCRAFT)).setRegistryName(location("emerald_sword")),
-					
-					ZCraftItems.emerald_helmet = new ArmorItem(ZCraftArmourMaterial.emerald, EquipmentSlotType.HEAD, new Item.Properties().group(ZCRAFT)).setRegistryName(location("emerald_helmet")),
-					ZCraftItems.emerald_chestplate = new ArmorItem(ZCraftArmourMaterial.emerald, EquipmentSlotType.CHEST, new Item.Properties().group(ZCRAFT)).setRegistryName(location("emerald_chestplate")),
-					ZCraftItems.emerald_leggings = new ArmorItem(ZCraftArmourMaterial.emerald, EquipmentSlotType.LEGS, new Item.Properties().group(ZCRAFT)).setRegistryName(location("emerald_leggings")),
-					ZCraftItems.emerald_boots = new ArmorItem(ZCraftArmourMaterial.emerald, EquipmentSlotType.FEET, new Item.Properties().group(ZCRAFT)).setRegistryName(location("emerald_boots")),
+					//Items
+					ZCraftItems.ruby = new Item(new Item.Properties().group(ZCRAFT_ITEMS)).setRegistryName(location("ruby")),
+					ZCraftItems.cloth = new Item(new Item.Properties().group(ZCRAFT_ITEMS)).setRegistryName(location("cloth")),
+					ZCraftItems.obsidian_ingot = new Item(new Item.Properties().group(ZCRAFT_ITEMS)).setRegistryName(location("obsidian_ingot")),
+					ZCraftItems.obsidian_shard = new Item(new Item.Properties().group(ZCRAFT_ITEMS)).setRegistryName(location("obsidian_shard")),
+					ZCraftItems.diamond_shard = new Item(new Item.Properties().group(ZCRAFT_ITEMS)).setRegistryName(location("diamond_shard")),
+					ZCraftItems.emerald_shard = new Item(new Item.Properties().group(ZCRAFT_ITEMS)).setRegistryName(location("emerald_shard")),
+
+					ZCraftItems.charged_pearl = new ItemChargedPearl(new Item.Properties().group(ZCRAFT_ITEMS).maxStackSize(16)).setRegistryName(location("charged_pearl")),
 
 					
-					ZCraftItems.shard_block = new BlockItem(ZCraftBlocks.shard_block, new Item.Properties().group(ZCRAFT)).setRegistryName(ZCraftBlocks.shard_block.getRegistryName()),
-					ZCraftItems.ruby_ore = new BlockItem(ZCraftBlocks.ruby_ore, new Item.Properties().group(ZCRAFT)).setRegistryName(ZCraftBlocks.ruby_ore.getRegistryName())
+					//Blocks
+					ZCraftItems.ruby_block = new BlockItem(ZCraftBlocks.ruby_block, new Item.Properties().group(ZCRAFT_ITEMS)).setRegistryName(ZCraftBlocks.ruby_block.getRegistryName()),
+					ZCraftItems.ruby_ore = new BlockItem(ZCraftBlocks.ruby_ore, new Item.Properties().group(ZCRAFT_ITEMS)).setRegistryName(ZCraftBlocks.ruby_ore.getRegistryName()),
+							
 					
+					//Tools
+					
+					ZCraftItems.flint_axe = new CustomAxeItem(ZCraftToolMaterial.flint, -3.0f, -2.5f, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("flint_axe")),
+					ZCraftItems.flint_hoe = new HoeItem(ZCraftToolMaterial.flint, -3.0f, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("flint_hoe")),
+					ZCraftItems.flint_pickaxe = new CustomPickaxeItem(ZCraftToolMaterial.flint, -3, -3.0f, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("flint_pickaxe")),
+					ZCraftItems.flint_shovel = new ShovelItem(ZCraftToolMaterial.flint, -3.0f, -3.0f, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("flint_shovel")),
+					ZCraftItems.flint_sword = new SwordItem(ZCraftToolMaterial.flint, -1, -1.5f, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("flint_sword")),
+
+					
+					ZCraftItems.obsidian_axe = new CustomAxeItem(ZCraftToolMaterial.obsidian, -1.0f, -3.0f, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("obsidian_axe")),
+					ZCraftItems.obsidian_pickaxe = new CustomPickaxeItem(ZCraftToolMaterial.obsidian, -4, -2.8f, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("obsidian_pickaxe")),
+					ZCraftItems.obsidian_shovel = new ShovelItem(ZCraftToolMaterial.obsidian, -3.5f, -3.0f, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("obsidian_shovel")),
+					ZCraftItems.obsidian_sword = new SwordItem(ZCraftToolMaterial.obsidian, 0, -2.0f, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("obsidian_sword")),
+					
+					ZCraftItems.emerald_axe = new CustomAxeItem(ZCraftToolMaterial.emerald, -1.0f, 0.0f, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("emerald_axe")),
+					ZCraftItems.emerald_pickaxe = new CustomPickaxeItem(ZCraftToolMaterial.emerald, -4, 0.0f, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("emerald_pickaxe")),
+					ZCraftItems.emerald_shovel = new ShovelItem(ZCraftToolMaterial.emerald, -3.5f, 0.0f, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("emerald_shovel")),
+					ZCraftItems.emerald_sword = new SwordItem(ZCraftToolMaterial.emerald, 0, 0.0f, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("emerald_sword")),
+
+					
+					//Armors
+					ZCraftItems.obsidian_helmet = new ArmorItem(ZCraftArmourMaterial.obsidian, EquipmentSlotType.HEAD, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("obsidian_helmet")),
+					ZCraftItems.obsidian_chestplate = new ArmorItem(ZCraftArmourMaterial.obsidian, EquipmentSlotType.CHEST, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("obsidian_chestplate")),
+					ZCraftItems.obsidian_leggings = new ArmorItem(ZCraftArmourMaterial.obsidian, EquipmentSlotType.LEGS, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("obsidian_leggings")),
+					ZCraftItems.obsidian_boots = new ArmorItem(ZCraftArmourMaterial.obsidian, EquipmentSlotType.FEET, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("obsidian_boots")),
+
+					ZCraftItems.emerald_helmet = new ArmorItem(ZCraftArmourMaterial.emerald, EquipmentSlotType.HEAD, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("emerald_helmet")),
+					ZCraftItems.emerald_chestplate = new ArmorItem(ZCraftArmourMaterial.emerald, EquipmentSlotType.CHEST, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("emerald_chestplate")),
+					ZCraftItems.emerald_leggings = new ArmorItem(ZCraftArmourMaterial.emerald, EquipmentSlotType.LEGS, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("emerald_leggings")),
+					ZCraftItems.emerald_boots = new ArmorItem(ZCraftArmourMaterial.emerald, EquipmentSlotType.FEET, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("emerald_boots")),
+
+					ZCraftItems.cloth_helmet = new ArmorItem(ZCraftArmourMaterial.cloth, EquipmentSlotType.HEAD, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("cloth_helmet")),
+					ZCraftItems.cloth_chestplate = new ArmorItem(ZCraftArmourMaterial.cloth, EquipmentSlotType.CHEST, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("cloth_chestplate")),
+					ZCraftItems.cloth_leggings = new ArmorItem(ZCraftArmourMaterial.cloth, EquipmentSlotType.LEGS, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("cloth_leggings")),
+					ZCraftItems.cloth_boots = new ArmorItem(ZCraftArmourMaterial.cloth, EquipmentSlotType.FEET, new Item.Properties().group(ZCRAFT_TOOLS)).setRegistryName(location("cloth_boots"))
+
+					
+
+							
 				
 			);
 			
@@ -140,7 +162,7 @@ public class ZCraft
 		{
 			event.getRegistry().registerAll
 			(
-					ZCraftBlocks.shard_block = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0f, 3.0f).lightValue(2).sound(SoundType.METAL)).setRegistryName(location("shard_block")),
+					ZCraftBlocks.ruby_block = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0f, 3.0f).lightValue(2).sound(SoundType.METAL)).setRegistryName(location("ruby_block")),
 					ZCraftBlocks.ruby_ore = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 3.0f).lightValue(2).sound(SoundType.STONE)).setRegistryName(location("ruby_ore"))
 					
 			);
