@@ -3,20 +3,24 @@ package com.github.dhtdesign.zcraft.config;
 import net.minecraftforge.common.ForgeConfigSpec;
 
 public class OregenConfig {
-	public static ForgeConfigSpec.IntValue ore_chance;
-	public static ForgeConfigSpec.BooleanValue generate_overworld;
+	
+	public static final String CATEGORY_ORE = "oregen";
+	
+	public static ForgeConfigSpec.IntValue ruby_ore_chance;
+	public static ForgeConfigSpec.BooleanValue generate_ruby_ore;
 
 	public static void init(ForgeConfigSpec.Builder server, ForgeConfigSpec.Builder client)
 	{
-		server.comment("Oregen Config");
+		server.comment("Oregen Config").push(CATEGORY_ORE);
 
-		ore_chance = server
+		ruby_ore_chance = server
 				.comment("Maximum number of ore veins that cans spawn in one chunk.")
-				.defineInRange("oregen.ore_chance", 2, 1, 6);
+				.defineInRange("ore_chance", 2, 1, 6);
 
-		generate_overworld = server
-				.comment("Decide if you want zCraft ores to spawn in the overworld")
-				.define("oregen.generate_overworld", true);
+		generate_ruby_ore = server
+				.comment("Decide if you want Ruby ore to spawn in the overworld")
+				.define("ruby_ore", true);
+		server.pop();
 	}
 
 }

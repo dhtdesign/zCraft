@@ -9,7 +9,7 @@ public class ZCraftItems
 	public static Item diamond_shard;
 	public static Item emerald_shard;
 	public static Item pouch;
-	public static Item pouch_big;
+	public static Item bag;
 	public static Item obsidian_ingot;
 	public static Item cheese;
 	public static Item charged_pearl;

@@ -2,6 +2,6 @@
     "parent": "item/handheld",
     "textures": 
 	{
-        "layer0": "zcraft:item/pouch_big"
+        "layer0": "zcraft:item/bag"
     }
 }

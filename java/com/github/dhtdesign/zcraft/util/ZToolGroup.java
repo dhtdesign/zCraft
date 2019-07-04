@@ -15,7 +15,7 @@ public class ZToolGroup extends ItemGroup
 	@Override
 	public ItemStack createIcon() {
 		
-		return new ItemStack(ZCraftItems.obsidian_pickaxe);
+		return new ItemStack(ZCraftItems.flint_axe);
 	}
 
 }

@@ -7,5 +7,4 @@ public class ZCraftBlocks
 	public static Block ruby_block;
 	public static Block ruby_ore;
 	
-
 }

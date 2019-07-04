@@ -21,6 +21,9 @@ public class Config
 	static
 	{
 		OregenConfig.init(server_builder, client_builder);
+		Tool_Armor_Config.init(server_builder, client_builder);
+		
+		
 		
 		SERVER = server_builder.build();
 		CLIENT = client_builder.build();

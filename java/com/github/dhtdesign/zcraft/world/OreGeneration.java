@@ -14,13 +14,13 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class OreGeneration {
 	public static void setupOreGeneration() 
 	{
-		if (OregenConfig.generate_overworld.get()) 
+		if (OregenConfig.generate_ruby_ore.get()) 
 		{
 
 			for (Biome biome : ForgeRegistries.BIOMES) 
 			{
 
-				biome.addFeature(Decoration.UNDERGROUND_ORES, new ConfiguredFeature<OreFeatureConfig>(Feature.ORE, new OreFeatureConfig(FillerBlockType.NATURAL_STONE, ZCraftBlocks.ruby_ore.getDefaultState(), OregenConfig.ore_chance.get())));
+				biome.addFeature(Decoration.UNDERGROUND_ORES, new ConfiguredFeature<OreFeatureConfig>(Feature.ORE, new OreFeatureConfig(FillerBlockType.NATURAL_STONE, ZCraftBlocks.ruby_ore.getDefaultState(), OregenConfig.ruby_ore_chance.get())));
 			}
 
 		}
