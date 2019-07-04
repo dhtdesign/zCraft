@@ -12,6 +12,7 @@ public class ItemChargedPearl extends Item {
 		// TODO Auto-generated constructor stub
 	}
 
+	@Override
 	@OnlyIn(Dist.CLIENT)
 	public boolean hasEffect(ItemStack stack)
     {

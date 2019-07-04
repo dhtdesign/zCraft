@@ -15,6 +15,13 @@ public class ZCraftItems
 	public static Item charged_pearl;
 	public static Item ruby;
 	public static Item cloth;
+	public static Item coin;
+	public static Item coin_left;
+	public static Item coin_right;
+
+	
+	
+	
 	
 	//	Tools
 	public static Item flint_axe;
