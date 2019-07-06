@@ -3,9 +3,12 @@ package com.github.dhtdesign.zcraft;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.github.dhtdesign.zcraft.blocks.CustomRubyOre;
 import com.github.dhtdesign.zcraft.config.Config;
 import com.github.dhtdesign.zcraft.config.Tool_Armor_Config;
 import com.github.dhtdesign.zcraft.items.CustomAxeItem;
+import com.github.dhtdesign.zcraft.items.CustomCheeseItem;
+import com.github.dhtdesign.zcraft.items.CustomFoods;
 import com.github.dhtdesign.zcraft.items.CustomPickaxeItem;
 import com.github.dhtdesign.zcraft.items.ItemChargedPearl;
 import com.github.dhtdesign.zcraft.lists.ZCraftArmourMaterial;
@@ -93,6 +96,7 @@ public class ZCraft
 		{
 	
 			
+			
 			event.getRegistry().registerAll
 			(
 					//Items
@@ -112,7 +116,7 @@ public class ZCraft
 					ZCraftItems.charged_pearl = new ItemChargedPearl(new Item.Properties().group(ZCRAFT_ITEMS).maxStackSize(16)).setRegistryName(location("charged_pearl")),
 
 					//Food
-					ZCraftItems.cheese = new Item(new Item.Properties().group(ZCRAFT_ITEMS)).setRegistryName(location("cheese")),
+					ZCraftItems.cheese = new CustomCheeseItem(new Item.Properties().group(ZCRAFT_ITEMS).food(CustomFoods.CHEESE)).setRegistryName(location("cheese")),
 					
 					//Blocks
 					ZCraftItems.ruby_block = new BlockItem(ZCraftBlocks.ruby_block, new Item.Properties().group(ZCRAFT_ITEMS)).setRegistryName(ZCraftBlocks.ruby_block.getRegistryName()),
@@ -191,7 +195,7 @@ public class ZCraft
 			event.getRegistry().registerAll
 			(
 					ZCraftBlocks.ruby_block = new Block(Block.Properties.create(Material.IRON).hardnessAndResistance(2.0f, 3.0f).lightValue(2).sound(SoundType.METAL)).setRegistryName(location("ruby_block")),
-					ZCraftBlocks.ruby_ore = new Block(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 3.0f).lightValue(2).sound(SoundType.STONE)).setRegistryName(location("ruby_ore"))
+					ZCraftBlocks.ruby_ore = new CustomRubyOre(Block.Properties.create(Material.ROCK).hardnessAndResistance(2.0f, 3.0f).lightValue(2).sound(SoundType.STONE)).setRegistryName(location("ruby_ore"))
 					
 			);
 			
